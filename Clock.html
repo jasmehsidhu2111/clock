@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <div bgcolor="black" class="jj"><button>Home</button>.......
+            <a href="https://github.com/jasmehsidhu2111"><button>About</button></a>.......
+            <a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1"><button>Sign in</button></a>.......
+            <a href="https://www.timeanddate.com/time/zones/ist"><button>IST</button></a>.......
+            <button onclick="contact()">Contact us</button></div>
+            <h3 class="con" align="center"></h3>
+            <h1 align="center">Welcome to the world of time</h1>
+        <div align="center" id="ja">
+            <h2>The current time is:</h2><h2 id="j"></h2>
+            <p align="center">This website shows you the standard time of india, <br>
+ Developed by Jasmeh singh.for more projects you can visit on my <br>
+ Github page by clicking on about button in navbar
+            </p>
+        </div>
+    </body>
+    <style>
+   button{font-size:20px;border-width: 0px;background-color: grey;margin-top:10px;margin-left: 5px;}
+   button:hover{background-color: dimgray;}
+   h1{font-family: cursive;}
+   .jj{background-color: black;height:40px}
+   h2{font-size: 50px;}
+    </style>
+<script>
+function time2(){
+    var importTime=new Date();
+    var date=importTime.toLocaleDateString();
+    var displayTime=importTime.getHours()+":"+importTime.getMinutes()+":"+importTime.getSeconds()
+    return  document.getElementById("j").innerHTML=displayTime+" on "+date;
+}
+setInterval(time2,1000)
+function contact(){
+    var x=document.getElementsByClassName("con")
+    return x[0].innerHTML="For queries mail us on jasmeh72@gmail.com"
+}
+</script>
+    </html>
